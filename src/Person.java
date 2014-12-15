@@ -33,6 +33,19 @@ public class Person
     return firstn+" , "+lastn;
   } 
   
+  public boolean equals(Object obj)
+  {
+    if (obj instanceof Person)
+    {
+      Person other=(Person) obj;
+      return firstn==other.firstn && lastn==other.lastn && age==other.age;
+    }
+    else
+    {
+      return false;
+    }
+  }
+  
   //Mutators
   public void recordBirthday()
   {
