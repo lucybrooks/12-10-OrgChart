@@ -28,6 +28,19 @@ public class Manager extends Employee
     return "Manager: "+super.toString();
   }
   
+  public boolean equals(Object obj)
+  {
+    if(obj instanceof Manager)
+    {
+      Manager other=(Manager) obj;
+      return directReports==other.directReports && department==other.department;
+    }
+    else
+    {
+      return false;
+    }
+  }
+  
   //Mutators
   public void addDirectReport(Employee employee)
   {
