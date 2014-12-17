@@ -19,7 +19,6 @@ public class OrgChart
   {
     System.out.print(p.getLastName()+" ");
     System.out.print(p.getFirstName()+" ");
-    System.out.print(p.getAge()+" ");
     if (p instanceof Employee)
     {
       System.out.print(((Employee)p).getWage()+" ");
