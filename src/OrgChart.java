@@ -9,28 +9,25 @@ public class OrgChart
     Employee pt2=new Employee("Finnick", "Odair", 24, 28.5, 7, "JR Developer");
                                 
                                 
-     printInfo(first);
+    System.out.print("Manager: ");                            
+    printInfo(first);
+    System.out.print("\tEmployee: ");
     printInfo(pt);
+    System.out.print("\tEmployee: ");
     printInfo(lt);
+    System.out.print("Manager: ");
     printInfo(second);  
+    System.out.print("\tEmployee: ");
     printInfo(pt2);
   }   
   public static void printInfo(Person p)
   {
-    System.out.print(p.getLastName()+" ");
-    System.out.print(p.getFirstName()+" ");
+    System.out.print(p.getLastName()+", ");
+    System.out.print(p.getFirstName()+": ");
     if (p instanceof Employee)
     {
-      System.out.print(((Employee)p).getWage()+" ");
-      System.out.print(((Employee)p).getHours()+" ");
-      System.out.print(((Employee)p).getJobTitle()+" ");
-    }
-    if (p instanceof Manager)
-    {
-      System.out.print(((Manager)p).getWage()+" ");
-      System.out.print(((Manager)p).getHours()+" ");
-      System.out.print(((Manager)p).getJobTitle()+" ");
-      System.out.println(((Manager)p).getDepartment());
+      System.out.print(((Employee)p).getJobTitle()+" @ ");
+      System.out.print(((Employee)p).getYearlySalary()+"$ ");
     }
     System.out.println();
   }                              
